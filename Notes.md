@@ -102,15 +102,19 @@ ENDCG
 
 ### 凹凸映射
 
-通常使用发现映射来修改光照实现凹凸效果
+通常使用法线映射来修改光照实现凹凸效果，需要用到法线纹理
 
-需要用到法线纹理
+指定顶点在切线空间下的法线位置，用在材质纹理下的颜色信息和法线纹理下的法线信息来做光照的相关运算
 
 
 
-案例使用的切线空间下的法线纹理
+案例使用的切线空间下的法线纹理，需要让视线向量、光线向量、法线向量统一在一个线性空间下做与光照相关的运算
+
+
 
 #### 切线空间下计算光照
+
+[为什么要有切线空间（Tangent Space），它的作用是什么？ - 知乎 (zhihu.com)](https://www.zhihu.com/question/23706933)
 
 需要在顶点着色器中将视角方向、光照方向变换到切线空间（这种方法高效）
 
@@ -179,9 +183,13 @@ v2f vert(a2v v) {
 }
 ```
 
-顶点着色器关键在于如何完成切线空间的变换
+顶点着色器关键在于如何完成切线空间的变换，这里数学原理见p71
 
-？？？
+这里是矩阵是正交的！不需要求逆，只需要转置
+
+将向量从世界坐标系A变换到切线坐标系B，变换矩阵是切线空间坐标轴x y z在世界坐标下的按行排列
+
+float3x3是行主的
 
 
 
@@ -215,21 +223,134 @@ fixed4 frag(v2f i) : SV_Target {
 }
 ```
 
-
+片元着色器中光照计算过程和单张纹理一致
 
 
 
 #### 世界空间下计算光照
 
+将采样得到的法线变换到世界空间，在片元着色器中完成
+
+```glsl
+struct v2f {
+	float4 pos : SV_POSITION;
+	float4 uv : TEXCOORD0;
+	float4 TtoW0 : TEXCOORD1;  
+	float4 TtoW1 : TEXCOORD2;  
+	float4 TtoW2 : TEXCOORD3; 
+};
+```
+
+在片元着色器进行切线空间到世界空间的变换，需要传递三个坐标轴，用以构建变换矩阵
 
 
 
+```glsl
+v2f vert(a2v v) {
+	v2f o;
+	o.pos = UnityObjectToClipPos(v.vertex);
+	
+	o.uv.xy = v.texcoord.xy * _MainTex_ST.xy + _MainTex_ST.zw;
+	o.uv.zw = v.texcoord.xy * _BumpMap_ST.xy + _BumpMap_ST.zw;
+	
+	float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;  
+	fixed3 worldNormal = UnityObjectToWorldNormal(v.normal);  
+	fixed3 worldTangent = UnityObjectToWorldDir(v.tangent.xyz);  
+	fixed3 worldBinormal = cross(worldNormal, worldTangent) * v.tangent.w; 
+	
+	// Compute the matrix that transform directions from tangent space to world space
+	// Put the world position in w component for optimization
+	o.TtoW0 = float4(worldTangent.x, worldBinormal.x, worldNormal.x, worldPos.x);
+	o.TtoW1 = float4(worldTangent.y, worldBinormal.y, worldNormal.y, worldPos.y);
+	o.TtoW2 = float4(worldTangent.z, worldBinormal.z, worldNormal.z, worldPos.z);
+	
+	return o;
+}
+
+fixed4 frag(v2f i) : SV_Target {
+	// Get the position in world space		
+	float3 worldPos = float3(i.TtoW0.w, i.TtoW1.w, i.TtoW2.w);
+	// Compute the light and view dir in world space
+	fixed3 lightDir = normalize(UnityWorldSpaceLightDir(worldPos));
+	fixed3 viewDir = normalize(UnityWorldSpaceViewDir(worldPos));
+	
+	// Get the normal in tangent space
+	fixed3 bump = UnpackNormal(tex2D(_BumpMap, i.uv.zw));
+	bump.xy *= _BumpScale;
+	bump.z = sqrt(1.0 - saturate(dot(bump.xy, bump.xy)));
+	// Transform the narmal from tangent space to world space
+	bump = normalize(half3(dot(i.TtoW0.xyz, bump), dot(i.TtoW1.xyz, bump), dot(i.TtoW2.xyz, bump)));
+	
+	fixed3 albedo = tex2D(_MainTex, i.uv).rgb * _Color.rgb;
+	
+	fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz * albedo;
+	
+	fixed3 diffuse = _LightColor0.rgb * albedo * max(0, dot(bump, lightDir));
+
+	fixed3 halfDir = normalize(lightDir + viewDir);
+	fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(max(0, dot(bump, halfDir)), _Gloss);
+	
+	return fixed4(ambient + diffuse + specular, 1.0);
+}
+```
+
+这里坐标变换矩阵需要按列放置
+
+顶点坐标附加在齐次位置，这样能少传递一个参数
+
+[3\*3] x [3*1] 矩阵向量乘法按行拆分，可读性略有下降
 
 
+
+第二个pass给出了更加直观的实现，经验证功能是正确的
+
+[着色器数据类型和精度 - Unity 手册](https://docs.unity.cn/cn/2020.3/Manual/SL-DataTypesAndPrecision.html)
 
 
 
 
 
 ### 渐变纹理
+
+渐变纹理用来控制物体的漫反射光照
+
+```glsl
+Properties {
+	_Color ("Color Tint", Color) = (1, 1, 1, 1)
+	_RampTex ("Ramp Tex", 2D) = "white" {}
+	_Specular ("Specular", Color) = (1, 1, 1, 1)
+	_Gloss ("Gloss", Range(8.0, 256)) = 20
+}
+```
+
+_RampTex变量用于保存渐变纹理
+
+```glsl
+fixed halfLambert  = 0.5 * dot(worldNormal, worldLightDir) + 0.5;
+fixed3 diffuseColor = tex2D(_RampTex, fixed2(halfLambert, halfLambert)).rgb * _Color.rgb;
+fixed3 diffuse = _LightColor0.rgb * diffuseColor;
+```
+
+渐变纹理只影响漫反射，计算半兰伯特光照，代替纹理坐标uv对渐变纹理采样
+
+
+
+### 遮罩纹理
+
+遮罩纹理可以保护某些区域避免修改，纹理值与表面属性相乘来控制影响的强弱，0相当于不受属性影响
+
+```glsl
+fixed specularMask = tex2D(_SpecularMask, i.uv).r * _SpecularScale;
+fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(max(0, dot(tangentNormal, halfDir)), _Gloss) * specularMask;
+```
+
+纹理的r分量计算掩码值，并与_SpecularScale相乘，结果越大，高光效果越明显
+
+
+
+
+
+
+
+
 

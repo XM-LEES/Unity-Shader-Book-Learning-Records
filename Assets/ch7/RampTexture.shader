@@ -32,7 +32,7 @@
 				float4 pos : SV_POSITION;
 				float3 worldNormal : TEXCOORD0;
 				float3 worldPos : TEXCOORD1;
-				float2 uv : TEXCOORD2;
+				// float2 uv : TEXCOORD2;
 			};
 			
 			v2f vert(a2v v) {
@@ -43,7 +43,7 @@
 				
 				o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
 				
-				o.uv = TRANSFORM_TEX(v.texcoord, _RampTex);
+				// o.uv = TRANSFORM_TEX(v.texcoord, _RampTex);
 				
 				return o;
 			}
