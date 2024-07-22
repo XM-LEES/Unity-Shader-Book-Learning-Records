@@ -2,6 +2,8 @@
 
 
 
+
+
 ## 7 基础纹理
 
 
@@ -185,7 +187,7 @@ v2f vert(a2v v) {
 
 顶点着色器关键在于如何完成切线空间的变换，这里数学原理见p71
 
-这里是矩阵是正交的！不需要求逆，只需要转置
+这里是矩阵是正交的，所以不需要求逆，只需要转置
 
 将向量从世界坐标系A变换到切线坐标系B，变换矩阵是切线空间坐标轴x y z在世界坐标下的按行排列
 
@@ -296,13 +298,13 @@ fixed4 frag(v2f i) : SV_Target {
 
 这里坐标变换矩阵需要按列放置
 
-顶点坐标附加在齐次位置，这样能少传递一个参数
+顶点坐标附加在齐次的位置，这样能少传递一个参数
 
 [3\*3] x [3*1] 矩阵向量乘法按行拆分，可读性略有下降
 
 
 
-第二个pass给出了更加直观的实现，经验证功能是正确的
+注释掉的pass尝试自己实现，多用了一个变量传递世界空间下的顶点坐标，看起来更加直观一些，经验证功能是正确的
 
 [着色器数据类型和精度 - Unity 手册](https://docs.unity.cn/cn/2020.3/Manual/SL-DataTypesAndPrecision.html)
 
@@ -315,17 +317,6 @@ fixed4 frag(v2f i) : SV_Target {
 渐变纹理用来控制物体的漫反射光照
 
 ```glsl
-Properties {
-	_Color ("Color Tint", Color) = (1, 1, 1, 1)
-	_RampTex ("Ramp Tex", 2D) = "white" {}
-	_Specular ("Specular", Color) = (1, 1, 1, 1)
-	_Gloss ("Gloss", Range(8.0, 256)) = 20
-}
-```
-
-_RampTex变量用于保存渐变纹理
-
-```glsl
 fixed halfLambert  = 0.5 * dot(worldNormal, worldLightDir) + 0.5;
 fixed3 diffuseColor = tex2D(_RampTex, fixed2(halfLambert, halfLambert)).rgb * _Color.rgb;
 fixed3 diffuse = _LightColor0.rgb * diffuseColor;
@@ -335,9 +326,13 @@ fixed3 diffuse = _LightColor0.rgb * diffuseColor;
 
 
 
+
+
 ### 遮罩纹理
 
 遮罩纹理可以保护某些区域避免修改，纹理值与表面属性相乘来控制影响的强弱，0相当于不受属性影响
+
+案例中用于控制高光反射
 
 ```glsl
 fixed specularMask = tex2D(_SpecularMask, i.uv).r * _SpecularScale;
@@ -350,7 +345,192 @@ fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(max(0, dot(tangentNorma
 
 
 
+## 透明效果
+
+
+
+### 透明度测试
+
+透明度测试需要在Tags中指定渲染队列"AlphaTest"
+
+```glsl
+Tags {"Queue"="AlphaTest" "IgnoreProjector"="True" "RenderType"="TransparentCutout"}
+```
+
+```glsl
+clip (texColor.a - _Cutoff);
+```
+
+测试由clip函数完成，裁剪条件为纹理颜色值，通过测试部分进行光照计算（没有高光反射）
+
+
+
+### 透明度混合（半透明效果）
+
+使用当前片元的透明度作为混合因子，与已经储存在颜色缓冲中的颜色值进行混合
+
+注意：开启深度测试，关闭深度写入
+
+```glsl
+Tags {"Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent"}
+```
+
+在pass语句块中关闭深度写入，设置混合因子（多种混合因子可选）
+
+```glsl
+pass{
+	Tags { "LightMode" = "ForwardBase" }
+
+	ZWrite Off	
+    Blend SrcAlpha OneMinusSrcAlpha
+}
+```
+
+
+
+```glsl
+return fixed4(ambient + diffuse, texColor.a * _AlphaScale);
+```
+
+在片元着色器的返回值中设置了透明通道，值为纹理像素的透明通道`texColor.a`和`_AlphaScale`乘积
+
+
+
+### 开启深度写入的半透明效果
+
+关闭深度写入会造成错误排序
+
+使用两个pass渲染模型，第一个开启深度写入，第二个进行透明度混合
+
+
+
+```glsl
+pass{
+	ZWrite On
+	ColorMask 0
+}
+```
+
+第一个pass将模型的深度信息写入缓冲区，用以剔除被自身遮挡的片元，从原理上看，对于模型自身前后遮挡问题根据zbuffer剔除，这和不透明的方式来处理一致，我们只能看到靠近相机的部分
+
+即使是半透明的，也只能看到距离相机最近的表面，不同物体之间仍然遵循透明度混合
+
+
+
+### 双面渲染透明效果
+
+#### 透明度测试双面渲染只需要关闭Cull
+
+```glsl
+Pass {
+	Tags { "LightMode"="ForwardBase" }
+	// Turn off culling
+	Cull Off
+	CGPROGRAM
+    /**/
+```
+
+默认Cull Back，也可以设为Front，剔除前表面
+
+
+
+#### 透明度混合双面渲染
+
+SubShader中的pass顺序执行，可以利用这一点控制正面/背面的渲染顺序
+
+透明度混合shader中第一个pass 设置Cull Front剔除正向图元，第二个设置Cull Back剔除背向图元
+
+
+
+总结：
+
+透明度测试
+
+- 开启深度写入
+- 双面渲染只需要关闭Cull
+
+透明度混合
+
+- 关闭深度写入
+- 对于复杂物体可以开启深度写入，这需要先增加一个pass将模型的深度信息写入缓冲区，用以剔除被自身遮挡的片元，第二个pass进行混合
+- 双面混合使用不同pass控制正面/背面的渲染顺序
+
+
+
+思考问题1：双面混合可否使用之前深度写入的方法？显然不可以，原因在于ZBuffer只保留了最靠近相机的片元
+
+
+
+思考问题2：可不可以通过剔除背面实现开启ZWrite混合一样的效果？不可以，复杂物体透明部分关系混乱和正面背面无关，是由于渲染顺序不正确引起的，
+
+
+
+思考问题3：透明度混合为什么要关ZWrite，不关会出现什么情况？
+
+在透明度混合中，ZWrite影响透明物体之间有重叠部分的情况（物理上的重叠，一个物体嵌入到另一个物体，scene8.4给出了示例，可以更改ZWrite Off查看效果）
+
+前面方块的重叠部分被完全剔除掉了，完全没有渲染，它被剔除掉的原因是因为Unity根据物体排序级别的排序，会先渲染后方的方块，由于后方的方块进行了深度写入，所以等到前面方块渲染的时候，重叠部分的像素无法通过depth test，会直接被剔除掉
+
+如果两个透明物体不重叠，关闭ZWrite与否对最终结果没有影响，原因是从后往前渲染，前面物体的Z值一定比后面的小
+
+[Unity 透明混合为什么要关闭深度写入_unity 透明物体重叠闪烁-CSDN博客](https://blog.csdn.net/u011105442/article/details/134136441?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Ctr-1-134136441-blog-120240950.235^v43^pc_blog_bottom_relevance_base6&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Ctr-1-134136441-blog-120240950.235^v43^pc_blog_bottom_relevance_base6)
+
+
+
+思考问题4：为什么透明度混合不能直接关闭Cull？
+
+scene8_7_2中新增立方体AlphaBlendCullOff进行对比
+
+因为没有开启深度写入，无法保证这些面的渲染顺序，会出现错误混合效果，比如底面盖到最顶层
+
+即使开启深度写入，确保了渲染顺序没有问题，也会有一些面不被渲染，原因见思考问题3
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+[着色器语义 - Unity 手册](https://docs.unity.cn/cn/2022.3/Manual/SL-ShaderSemantics.html)
+
+关于着色器语义
+
+
+
+[着色器数据类型和精度 - Unity 手册](https://docs.unity.cn/cn/2020.3/Manual/SL-DataTypesAndPrecision.html)
+
+为社么在着色器中用fixed 在结构体中用float
