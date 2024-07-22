@@ -1,5 +1,3 @@
-[这份文档更多是对shader示例代码的比较和理解，理论涉及较少]()
-
 
 
 
@@ -110,7 +108,7 @@ ENDCG
 
 
 
-案例使用的切线空间下的法线纹理，需要让视线向量、光线向量、法线向量统一在一个线性空间下做与光照相关的运算
+案例使用的切线空间下的法线纹理，需要让视线向量、光线向量、法线向量统一在一个线性空间下做光照相关的运算
 
 
 
@@ -306,8 +304,6 @@ fixed4 frag(v2f i) : SV_Target {
 
 注释掉的pass尝试自己实现，多用了一个变量传递世界空间下的顶点坐标，看起来更加直观一些，经验证功能是正确的
 
-[着色器数据类型和精度 - Unity 手册](https://docs.unity.cn/cn/2020.3/Manual/SL-DataTypesAndPrecision.html)
-
 
 
 
@@ -347,8 +343,6 @@ fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(max(0, dot(tangentNorma
 
 ## 透明效果
 
-
-
 ### 透明度测试
 
 透明度测试需要在Tags中指定渲染队列"AlphaTest"
@@ -362,6 +356,8 @@ clip (texColor.a - _Cutoff);
 ```
 
 测试由clip函数完成，裁剪条件为纹理颜色值，通过测试部分进行光照计算（没有高光反射）
+
+
 
 
 
@@ -396,13 +392,13 @@ return fixed4(ambient + diffuse, texColor.a * _AlphaScale);
 
 
 
+
+
 ### 开启深度写入的半透明效果
 
 关闭深度写入会造成错误排序
 
 使用两个pass渲染模型，第一个开启深度写入，第二个进行透明度混合
-
-
 
 ```glsl
 pass{
@@ -414,6 +410,8 @@ pass{
 第一个pass将模型的深度信息写入缓冲区，用以剔除被自身遮挡的片元，从原理上看，对于模型自身前后遮挡问题根据zbuffer剔除，这和不透明的方式来处理一致，我们只能看到靠近相机的部分
 
 即使是半透明的，也只能看到距离相机最近的表面，不同物体之间仍然遵循透明度混合
+
+
 
 
 
@@ -442,16 +440,18 @@ SubShader中的pass顺序执行，可以利用这一点控制正面/背面的渲
 
 
 
-总结：
+
+
+`总结`：
 
 透明度测试
 
-- 开启深度写入
+- 开启深度写入，深度测试
 - 双面渲染只需要关闭Cull
 
 透明度混合
 
-- 关闭深度写入
+- 关闭深度写入，开启深度测试
 - 对于复杂物体可以开启深度写入，这需要先增加一个pass将模型的深度信息写入缓冲区，用以剔除被自身遮挡的片元，第二个pass进行混合
 - 双面混合使用不同pass控制正面/背面的渲染顺序
 
@@ -461,19 +461,19 @@ SubShader中的pass顺序执行，可以利用这一点控制正面/背面的渲
 
 
 
-思考问题2：可不可以通过剔除背面实现开启ZWrite混合一样的效果？不可以，复杂物体透明部分关系混乱和正面背面无关，是由于渲染顺序不正确引起的，
+思考问题2：可不可以通过剔除背面实现开启ZWrite混合一样的效果？不可以，复杂物体透明部分关系混乱和正面背面无关，是由于渲染顺序不正确引起的
 
 
 
 思考问题3：透明度混合为什么要关ZWrite，不关会出现什么情况？
 
-在透明度混合中，ZWrite影响透明物体之间有重叠部分的情况（物理上的重叠，一个物体嵌入到另一个物体，scene8.4给出了示例，可以更改ZWrite Off查看效果）
+在透明度混合中，ZWrite影响透明物体之间有重叠部分的情况（物理上的重叠，一个物体嵌入到另一个物体，scene8_4中增加了一个透明立方体，开启ZWrite重叠部分会被“吃掉”）
 
-前面方块的重叠部分被完全剔除掉了，完全没有渲染，它被剔除掉的原因是因为Unity根据物体排序级别的排序，会先渲染后方的方块，由于后方的方块进行了深度写入，所以等到前面方块渲染的时候，重叠部分的像素无法通过depth test，会直接被剔除掉
+因为Unity根据物体排序级别的排序，前面方块的重叠部分被剔除掉了没有渲染，会先渲染后方的方块，由于后方的方块进行了深度写入，所以等到前面方块渲染的时候，重叠部分的像素无法通过深度测试，会直接被剔除掉
 
 如果两个透明物体不重叠，关闭ZWrite与否对最终结果没有影响，原因是从后往前渲染，前面物体的Z值一定比后面的小
 
-[Unity 透明混合为什么要关闭深度写入_unity 透明物体重叠闪烁-CSDN博客](https://blog.csdn.net/u011105442/article/details/134136441?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Ctr-1-134136441-blog-120240950.235^v43^pc_blog_bottom_relevance_base6&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Ctr-1-134136441-blog-120240950.235^v43^pc_blog_bottom_relevance_base6)
+[Unity 透明混合为什么要关闭深度写入_unity 透明物体重叠闪烁](https://blog.csdn.net/u011105442/article/details/134136441?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Ctr-1-134136441-blog-120240950.235^v43^pc_blog_bottom_relevance_base6&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~Ctr-1-134136441-blog-120240950.235^v43^pc_blog_bottom_relevance_base6)
 
 
 
@@ -484,10 +484,6 @@ scene8_7_2中新增立方体AlphaBlendCullOff进行对比
 因为没有开启深度写入，无法保证这些面的渲染顺序，会出现错误混合效果，比如底面盖到最顶层
 
 即使开启深度写入，确保了渲染顺序没有问题，也会有一些面不被渲染，原因见思考问题3
-
-
-
-
 
 
 
