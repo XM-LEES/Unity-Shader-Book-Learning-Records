@@ -15,7 +15,7 @@ C:/Users/222/Desktop/Learning/My project
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51786
+59605
 Successfully changed project path to: C:/Users/222/Desktop/Learning/My project
 C:/Users/222/Desktop/Learning/My project
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/222/Desktop/Learning/My project
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [16988] Host "[IP] 10.46.18.139 [Port] 0 [Flags] 2 [Guid] 2486509142 [EditorId] 2486509142 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-NFHVJ42) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [2588] Host "[IP] 10.46.18.204 [Port] 0 [Flags] 2 [Guid] 3261372846 [EditorId] 3261372846 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-NFHVJ42) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [16988] Host "[IP] 10.46.18.139 [Port] 0 [Flags] 2 [Guid] 2486509142 [EditorId] 2486509142 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-NFHVJ42) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [2588] Host "[IP] 10.46.18.204 [Port] 0 [Flags] 2 [Guid] 3261372846 [EditorId] 3261372846 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-NFHVJ42) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 23 workers.
-Refreshing native plugins compatible for Editor in 21.37 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 21.48 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.17f1c1 (a01dafa986ec)
 [Subsystems] Discovering subsystems at path D:/Application/Unity/Hub/Editor/2022.3.17f1c1/Editor/Data/Resources/UnitySubsystems
@@ -70,44 +70,44 @@ Initialize mono
 Mono path[0] = 'D:/Application/Unity/Hub/Editor/2022.3.17f1c1/Editor/Data/Managed'
 Mono path[1] = 'D:/Application/Unity/Hub/Editor/2022.3.17f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Application/Unity/Hub/Editor/2022.3.17f1c1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56792
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56008
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Application/Unity/Hub/Editor/2022.3.17f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.098861 seconds.
-- Loaded All Assemblies, in  1.456 seconds
+Registered in 0.104090 seconds.
+- Loaded All Assemblies, in  1.589 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.297 seconds
-Domain Reload Profiling: 1751ms
-	BeginReloadAssembly (151ms)
+- Finished resetting the current domain, in  0.289 seconds
+Domain Reload Profiling: 1875ms
+	BeginReloadAssembly (157ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (266ms)
+	RebuildCommonClasses (287ms)
 	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (434ms)
-	LoadAllAssembliesAndSetupDomain (590ms)
-		LoadAssemblies (128ms)
+	initialDomainReloadingComplete (494ms)
+	LoadAllAssembliesAndSetupDomain (638ms)
+		LoadAssemblies (131ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (589ms)
-			TypeCache.Refresh (587ms)
-				TypeCache.ScanAssembly (429ms)
+		AnalyzeDomain (636ms)
+			TypeCache.Refresh (635ms)
+				TypeCache.ScanAssembly (459ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (298ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (289ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (236ms)
+		SetupLoadedEditorAssemblies (228ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (9ms)
 			SetLoadedEditorAssemblies (8ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (162ms)
-			ProcessInitializeOnLoadMethodAttributes (55ms)
+			ProcessInitializeOnLoadAttributes (154ms)
+			ProcessInitializeOnLoadMethodAttributes (56ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,55 +115,55 @@ Domain Reload Profiling: 1751ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  3.648 seconds
-Refreshing native plugins compatible for Editor in 7.19 ms, found 3 plugins.
+- Loaded All Assemblies, in  3.568 seconds
+Refreshing native plugins compatible for Editor in 5.06 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.597 seconds
-Domain Reload Profiling: 2529ms
-	BeginReloadAssembly (142ms)
+- Finished resetting the current domain, in  0.575 seconds
+Domain Reload Profiling: 2459ms
+	BeginReloadAssembly (141ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (20ms)
-	RebuildCommonClasses (33ms)
+	RebuildCommonClasses (32ms)
 	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (45ms)
-	LoadAllAssembliesAndSetupDomain (1700ms)
-		LoadAssemblies (1313ms)
+	initialDomainReloadingComplete (44ms)
+	LoadAllAssembliesAndSetupDomain (1656ms)
+		LoadAssemblies (1286ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (466ms)
-			TypeCache.Refresh (442ms)
-				TypeCache.ScanAssembly (397ms)
-			ScanForSourceGeneratedMonoScriptInfo (15ms)
+		AnalyzeDomain (449ms)
+			TypeCache.Refresh (429ms)
+				TypeCache.ScanAssembly (386ms)
+			ScanForSourceGeneratedMonoScriptInfo (14ms)
 			ResolveRequiredComponents (4ms)
-	FinalizeReload (598ms)
+	FinalizeReload (575ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (444ms)
+		SetupLoadedEditorAssemblies (426ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (5ms)
-			SetLoadedEditorAssemblies (3ms)
+			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (60ms)
-			ProcessInitializeOnLoadAttributes (343ms)
-			ProcessInitializeOnLoadMethodAttributes (25ms)
-			AfterProcessingInitializeOnLoad (7ms)
+			ProcessInitializeOnLoadAttributes (326ms)
+			ProcessInitializeOnLoadMethodAttributes (23ms)
+			AfterProcessingInitializeOnLoad (8ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (8ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 6.61 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 6.27 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3110 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 32 unused Assets / (57.3 KB). Loaded Objects now: 3583.
-Memory consumption went from 134.5 MB to 134.5 MB.
-Total: 3.288100 ms (FindLiveObjects: 0.449100 ms CreateObjectMapping: 0.101700 ms MarkObjects: 2.603400 ms  DeleteObjects: 0.131500 ms)
+Unloading 3132 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (57.6 KB). Loaded Objects now: 3606.
+Memory consumption went from 141.5 MB to 141.4 MB.
+Total: 3.234500 ms (FindLiveObjects: 0.401300 ms CreateObjectMapping: 0.086400 ms MarkObjects: 2.632000 ms  DeleteObjects: 0.113500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -180,421 +180,313 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 891769.801775 seconds.
-  path: Assets/ch9/ForwardRendering.shader
-  artifactKey: Guid(ccd09a7fb48dd1742a5b20c0f36a88d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRendering.shader using Guid(ccd09a7fb48dd1742a5b20c0f36a88d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59f84b01b564b5748f6d3157c6aca898') in 0.013347 seconds
+  Time since last request: 1838981.519209 seconds.
+  path: Assets/ch11/ImageSequenceAnimation.shader
+  artifactKey: Guid(bca0010bc199a62429c6144617cba523) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/ImageSequenceAnimation.shader using Guid(bca0010bc199a62429c6144617cba523) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6803f716f811d3c5d3cd4ca007e9ae1') in 0.016288 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 95.486151 seconds.
-  path: Assets/ch9/ForwardRendering.shader
-  artifactKey: Guid(ccd09a7fb48dd1742a5b20c0f36a88d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRendering.shader using Guid(ccd09a7fb48dd1742a5b20c0f36a88d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c3b3e4a0cd9d3b512f07317ed68c281') in 0.001434 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
+  Time since last request: 6.018521 seconds.
+  path: Assets/ch11/Billboard.shader
+  artifactKey: Guid(4bfaf31efa9ddfe49b9a52dfbd90714c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/Billboard.shader using Guid(4bfaf31efa9ddfe49b9a52dfbd90714c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b95c87b73fc6f72f3cd14309b75a76d9') in 0.000909 seconds
+Number of updated asset objects reloaded before import = 1
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 130.551956 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec32522d79e248609ef158badfaadadd') in 0.118705 seconds
+  Time since last request: 35.930577 seconds.
+  path: Assets/ch11/BillboardMat.mat
+  artifactKey: Guid(dd4cfe9d4ea2fbb4fb6ac67bd756a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/BillboardMat.mat using Guid(dd4cfe9d4ea2fbb4fb6ac67bd756a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39213c92d19c815a1c1c81a8f3da0d7f') in 0.118077 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 59.131590 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'Unity Shaders Book/Chapter 9/ForwardRendering': undeclared identifier 'ambient' at line 54 (on d3d11)
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 0>, Vertex program with DIRECTIONAL LIGHTPROBE_SH
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDBASE UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADER_API_GLES30 SHADOWS_SCREEN SHADOWS_SHADOWMASK UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING VERTEXLIGHT_ON
-Shader error in 'Unity Shaders Book/Chapter 9/ForwardRendering': undeclared identifier 'ambient' at line 54 (on d3d11)
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 0>, Vertex program with DIRECTIONAL LIGHTPROBE_SH
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDBASE UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADER_API_GLES30 SHADOWS_SCREEN SHADOWS_SHADOWMASK UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING VERTEXLIGHT_ON
- -> (artifact id: '0eeaf5b35afa5e70723024cf730a1e16') in 0.033512 seconds
-Number of updated asset objects reloaded before import = 0
+  Time since last request: 198.632661 seconds.
+  path: Assets/ch11/BillboardMat.mat
+  artifactKey: Guid(dd4cfe9d4ea2fbb4fb6ac67bd756a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/BillboardMat.mat using Guid(dd4cfe9d4ea2fbb4fb6ac67bd756a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1584f9de67b7116c07cc66274ba9dc4f') in 0.012062 seconds
+Number of updated asset objects reloaded before import = 1
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 8.972992 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '356056e820d0c3f6858000c9784a0a39') in 0.037961 seconds
-Number of updated asset objects reloaded before import = 0
+  Time since last request: 178.668370 seconds.
+  path: Assets/ch11/BillboardMat.mat
+  artifactKey: Guid(dd4cfe9d4ea2fbb4fb6ac67bd756a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/BillboardMat.mat using Guid(dd4cfe9d4ea2fbb4fb6ac67bd756a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f9433f8c21caf6a4e3b5103bef6b4db') in 0.039676 seconds
+Number of updated asset objects reloaded before import = 1
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 13.510354 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0272d81b5f07145356ccab36c773d65f') in 0.023381 seconds
-Number of updated asset objects reloaded before import = 0
+  Time since last request: 13.058733 seconds.
+  path: Assets/ch11/BillboardMat.mat
+  artifactKey: Guid(dd4cfe9d4ea2fbb4fb6ac67bd756a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/BillboardMat.mat using Guid(dd4cfe9d4ea2fbb4fb6ac67bd756a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbe1bf1534c66c6a48b4debf681ff5cb') in 0.012034 seconds
+Number of updated asset objects reloaded before import = 1
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 804.821831 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'Unity Shaders Book/Chapter 9/ForwardRendering': syntax error: unexpected token 'struct' at line 82 (on d3d11)
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 1>, Vertex program with DIRECTIONAL
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRECTIONAL_COOKIE POINT POINT_COOKIE SHADER_API_GLES30 SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
-Shader error in 'Unity Shaders Book/Chapter 9/ForwardRendering': syntax error: unexpected token 'struct' at line 82 (on d3d11)
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 1>, Vertex program with DIRECTIONAL
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRECTIONAL_COOKIE POINT POINT_COOKIE SHADER_API_GLES30 SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
- -> (artifact id: 'cba3769a6eae60fcfdd618bc9cfc8d29') in 0.056779 seconds
+  Time since last request: 13.941225 seconds.
+  path: Assets/ch11/Billboard.shader
+  artifactKey: Guid(4bfaf31efa9ddfe49b9a52dfbd90714c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/Billboard.shader using Guid(4bfaf31efa9ddfe49b9a52dfbd90714c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49986c5a3ef729506986d048cacc5261') in 0.001060 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 513.670765 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'Unity Shaders Book/Chapter 9/ForwardRendering': syntax error: unexpected token 'struct' at line 82 (on d3d11)
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 1>, Vertex program with DIRECTIONAL
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRECTIONAL_COOKIE POINT POINT_COOKIE SHADER_API_GLES30 SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
-Shader error in 'Unity Shaders Book/Chapter 9/ForwardRendering': syntax error: unexpected token 'struct' at line 82 (on d3d11)
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 1>, Vertex program with DIRECTIONAL
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRECTIONAL_COOKIE POINT POINT_COOKIE SHADER_API_GLES30 SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
- -> (artifact id: '207e0b71db449a5fd174c531c6f4c295') in 0.048637 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 10.611017 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'Unity Shaders Book/Chapter 9/ForwardRendering': redefinition of 'v2f' at line 88 (on d3d11)
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 1>, Vertex program with DIRECTIONAL
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRECTIONAL_COOKIE POINT POINT_COOKIE SHADER_API_GLES30 SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
-Shader error in 'Unity Shaders Book/Chapter 9/ForwardRendering': redefinition of 'v2f' at line 88 (on d3d11)
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 1>, Vertex program with DIRECTIONAL
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRECTIONAL_COOKIE POINT POINT_COOKIE SHADER_API_GLES30 SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
- -> (artifact id: '5d0e7830d729b78cbd62fe4ea8792172') in 0.050498 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 20.553565 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'Unity Shaders Book/Chapter 9/ForwardRendering': undeclared identifier 'UnityObjectToWorldNormal' at line 91 (on d3d11)
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 1>, Vertex program with DIRECTIONAL
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRECTIONAL_COOKIE POINT POINT_COOKIE SHADER_API_GLES30 SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
-Shader error in 'Unity Shaders Book/Chapter 9/ForwardRendering': undeclared identifier 'UnityObjectToWorldNormal' at line 91 (on d3d11)
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 1>, Vertex program with DIRECTIONAL
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRECTIONAL_COOKIE POINT POINT_COOKIE SHADER_API_GLES30 SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
- -> (artifact id: '0ed9a4ef3dd92cb3ef0381a69b9c7b58') in 0.055827 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 35.300429 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df4e1c4f814bd39dc45fc341d25b5e35') in 0.075027 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 12.857006 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53167ca1f33a8ac65055c72675f1ac63') in 0.087243 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 16.775861 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'Unity Shaders Book/Chapter 9/ForwardRendering': 'frag': Not all control paths return a value at line 98 (on d3d11)
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 1>, Fragment program with DIRECTIONAL
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRECTIONAL_COOKIE POINT POINT_COOKIE SHADER_API_GLES30 SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
- -> (artifact id: '9500b2c20326b8e2255121a9bc25d448') in 0.189027 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 13.640780 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6f9cef4a77dc27ed5166de7d07b007d') in 0.276880 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 9.025192 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c54a6d0a159dfaa382b035fcf0dde231') in 0.246175 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 12.193827 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0101c195d23a5ee91048072d496b723') in 0.056849 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 51.659788 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cd7964add8b22096db70633ae23f050') in 0.269081 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 321.880902 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25711c7c2d0344eb2f242275377a75b9') in 0.218384 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 93.783953 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'Unity Shaders Book/Chapter 9/ForwardRendering': Unterminated conditional expression. at line 70
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 1>, Vertex program with DIRECTIONAL
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRECTIONAL_COOKIE POINT POINT_COOKIE SHADER_API_GLES30 SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
-Shader warning in 'Unity Shaders Book/Chapter 9/ForwardRendering': Both vertex and fragment programs must be present in a shader snippet. Excluding it from compilation. at line 67
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 1>, Vertex program with DIRECTIONAL
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRECTIONAL_COOKIE POINT POINT_COOKIE SHADER_API_GLES30 SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
-Shader warning in 'Unity Shaders Book/Chapter 9/ForwardRendering': CGPROGRAM block does not contain #pragma vertex, #pragma fragment or #pragma surface directive, skipping at line 67
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 1>, Vertex program with DIRECTIONAL
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRECTIONAL_COOKIE POINT POINT_COOKIE SHADER_API_GLES30 SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
-Shader error in 'Unity Shaders Book/Chapter 9/ForwardRendering': Unterminated conditional expression. at line 70
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 1>, Vertex program with DIRECTIONAL
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRECTIONAL_COOKIE POINT POINT_COOKIE SHADER_API_GLES30 SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
-Shader error in 'Unity Shaders Book/Chapter 9/ForwardRendering': Unterminated conditional expression. at line 92
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 1>, Fragment program with DIRECTIONAL
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRECTIONAL_COOKIE POINT POINT_COOKIE SHADER_API_GLES30 SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
-Shader warning in 'Unity Shaders Book/Chapter 9/ForwardRendering': Both vertex and fragment programs must be present in a shader snippet. Excluding it from compilation. at line 67
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 1>, Vertex program with DIRECTIONAL
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRECTIONAL_COOKIE POINT POINT_COOKIE SHADER_API_GLES30 SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
-Shader warning in 'Unity Shaders Book/Chapter 9/ForwardRendering': CGPROGRAM block does not contain #pragma vertex, #pragma fragment or #pragma surface directive, skipping at line 67
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 1>, Vertex program with DIRECTIONAL
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRECTIONAL_COOKIE POINT POINT_COOKIE SHADER_API_GLES30 SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
- -> (artifact id: '78daf38069583b591a1d91017a5cb705') in 0.053501 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 22.950339 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed26e029750ab9ecf3458a40d89c9b7b') in 0.059844 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 13.533872 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'Unity Shaders Book/Chapter 9/ForwardRendering': 'frag': Not all control paths return a value at line 100 (on d3d11)
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 1>, Fragment program with DIRECTIONAL
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDADD UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRECTIONAL_COOKIE POINT POINT_COOKIE SHADER_API_GLES30 SPOT UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
- -> (artifact id: '780b4d18aca0bdace98ebecf51efd7df') in 0.051465 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 6.227151 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cc41b43ba5769b403c5de0da98e461b') in 0.096715 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 18.050002 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '773ee91a5b0e5db4751d8d47d7fa6ff0') in 0.081210 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 6.184261 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c32de36022b3b0218526c6d83e9f8b5') in 0.135449 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 17.202838 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b94224c95128d28c0df44df9ec6a3838') in 0.085025 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 19.809130 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '131e3cf8b370e7e7e5fee9443d8b479a') in 0.190985 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 12.132307 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16cf3aaaf1bf2d49ab5f702100e9e30b') in 0.166272 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 66.093631 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e6c3f968334eafcfbda7c946f739f64') in 0.207254 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 11.315559 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '014ed5f7587a5e0352f757ca8945cb31') in 0.145610 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 10.499075 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73f114737480bd614591152e8ab304e9') in 0.057635 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 11.324262 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd620012dcb2293c0ee760b3388aee3cf') in 0.095848 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 47.531638 seconds.
-  path: Assets/ch9/Chapter9-ForwardRendering.shader
-  artifactKey: Guid(dd737873ae6f81142b8281ba0f5081e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/Chapter9-ForwardRendering.shader using Guid(dd737873ae6f81142b8281ba0f5081e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1775d6fb7ce4a128469a9915aa6edb19') in 0.002200 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 2.573240 seconds.
-  path: Assets/ch9/ForwardRendering.shader
-  artifactKey: Guid(ccd09a7fb48dd1742a5b20c0f36a88d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRendering.shader using Guid(ccd09a7fb48dd1742a5b20c0f36a88d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6ea0cecc1db979dd52b814a4c650ecf') in 0.002094 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 38.412939 seconds.
-  path: Assets/ch9/Scene/Scene_9_2_2_1.unity
-  artifactKey: Guid(c492d2f69c0e2734c946e8e6534d1a08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/Scene/Scene_9_2_2_1.unity using Guid(c492d2f69c0e2734c946e8e6534d1a08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16056ba6720cd812e0b4a505ac5ade76') in 0.006006 seconds
-Number of updated asset objects reloaded before import = 0
+  Time since last request: 619.587845 seconds.
+  path: Assets/ch11/Scene/Scene_11_3_2.unity
+  artifactKey: Guid(f1e57bdaafd7d184e80bfa430c3c0203) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/Scene/Scene_11_3_2.unity using Guid(f1e57bdaafd7d184e80bfa430c3c0203) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd72bd7f8e866a298921dde2a8e9d2b7') in 0.000922 seconds
+Number of updated asset objects reloaded before import = 1
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.840 seconds
-Refreshing native plugins compatible for Editor in 6.94 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.452 seconds
+Refreshing native plugins compatible for Editor in 5.51 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  7.518 seconds
-Domain Reload Profiling: 9351ms
-	BeginReloadAssembly (171ms)
+- Finished resetting the current domain, in  1.065 seconds
+Domain Reload Profiling: 1514ms
+	BeginReloadAssembly (149ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (33ms)
+		CreateAndSetChildDomain (30ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (221ms)
+		LoadAssemblies (288ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (14ms)
+			TypeCache.Refresh (6ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1066ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (440ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (71ms)
+			ProcessInitializeOnLoadAttributes (323ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Refreshing native plugins compatible for Editor in 5.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (31.1 KB). Loaded Objects now: 3650.
+Memory consumption went from 136.8 MB to 136.8 MB.
+Total: 3.438300 ms (FindLiveObjects: 0.507400 ms CreateObjectMapping: 0.124400 ms MarkObjects: 2.749200 ms  DeleteObjects: 0.055600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.464 seconds
+Refreshing native plugins compatible for Editor in 5.78 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.103 seconds
+Domain Reload Profiling: 1562ms
+	BeginReloadAssembly (151ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (34ms)
+	LoadAllAssembliesAndSetupDomain (229ms)
+		LoadAssemblies (298ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (14ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (1103ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (425ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (66ms)
+			ProcessInitializeOnLoadAttributes (315ms)
+			ProcessInitializeOnLoadMethodAttributes (25ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 5.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (31.1 KB). Loaded Objects now: 3653.
+Memory consumption went from 139.0 MB to 139.0 MB.
+Total: 3.373300 ms (FindLiveObjects: 0.488800 ms CreateObjectMapping: 0.120800 ms MarkObjects: 2.700400 ms  DeleteObjects: 0.061500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.913 seconds
+Refreshing native plugins compatible for Editor in 7.04 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  7.753 seconds
+Domain Reload Profiling: 9661ms
+	BeginReloadAssembly (170ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (31ms)
 	RebuildCommonClasses (37ms)
 	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (40ms)
-	LoadAllAssembliesAndSetupDomain (1572ms)
-		LoadAssemblies (1653ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (1651ms)
+		LoadAssemblies (1733ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
 		AnalyzeDomain (14ms)
 			TypeCache.Refresh (6ms)
 				TypeCache.ScanAssembly (0ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (5ms)
-	FinalizeReload (7518ms)
+	FinalizeReload (7753ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (376ms)
+		SetupLoadedEditorAssemblies (382ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (7ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (62ms)
-			ProcessInitializeOnLoadAttributes (273ms)
+			ProcessInitializeOnLoadAttributes (279ms)
 			ProcessInitializeOnLoadMethodAttributes (23ms)
 			AfterProcessingInitializeOnLoad (7ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 6.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (31.1 KB). Loaded Objects now: 3656.
+Memory consumption went from 140.9 MB to 140.9 MB.
+Total: 3.903100 ms (FindLiveObjects: 0.484500 ms CreateObjectMapping: 0.126600 ms MarkObjects: 3.235900 ms  DeleteObjects: 0.054500 ms)
+
+Prepare: number of updated asset objects reloaded= 1
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.478 seconds
+Refreshing native plugins compatible for Editor in 5.85 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.044 seconds
+Domain Reload Profiling: 1518ms
+	BeginReloadAssembly (152ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (234ms)
+		LoadAssemblies (299ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (14ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1045ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (425ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (69ms)
+			ProcessInitializeOnLoadAttributes (311ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
 Refreshing native plugins compatible for Editor in 5.82 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3077 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 23 unused Assets / (31.1 KB). Loaded Objects now: 3628.
-Memory consumption went from 134.6 MB to 134.5 MB.
-Total: 3.310200 ms (FindLiveObjects: 0.472100 ms CreateObjectMapping: 0.116000 ms MarkObjects: 2.649800 ms  DeleteObjects: 0.070700 ms)
+Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (31.1 KB). Loaded Objects now: 3659.
+Memory consumption went from 142.9 MB to 142.8 MB.
+Total: 3.132400 ms (FindLiveObjects: 0.460100 ms CreateObjectMapping: 0.118000 ms MarkObjects: 2.500800 ms  DeleteObjects: 0.052000 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -612,578 +504,340 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 784.999587 seconds.
-  path: Assets/ch9/Scene/Scene_9_2_2_2.unity
-  artifactKey: Guid(a5a2ad9558b677d4fbb90e64862b4912) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/Scene/Scene_9_2_2_2.unity using Guid(a5a2ad9558b677d4fbb90e64862b4912) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da7567661bf491351702d9bbbe4509a6') in 0.004041 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1281.721546 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acaeba845fce995e71750587fa8381a7') in 0.104185 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 207.395453 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cf9d28549da7a73d0b7f82c2656fa66') in 0.039201 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 78998.241755 seconds.
-  path: Assets/ch9/ForwardRendering.shader
-  artifactKey: Guid(ccd09a7fb48dd1742a5b20c0f36a88d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRendering.shader using Guid(ccd09a7fb48dd1742a5b20c0f36a88d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf9b4ad0f0eca3cf4c34c128587955b6') in 0.000971 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 4.411340 seconds.
-  path: Assets/ch9/ForwardRendering 1.shader
-  artifactKey: Guid(1eaf77a79d7735c4d9fc4f9293f49d1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRendering 1.shader using Guid(1eaf77a79d7735c4d9fc4f9293f49d1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb959dfe4beade2ebad6fd8b455d26df') in 0.002110 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 36.527470 seconds.
-  path: Assets/ch9/ShadowMat.mat
-  artifactKey: Guid(ca81ff939fcace94488c46b92b5f5c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ShadowMat.mat using Guid(ca81ff939fcace94488c46b92b5f5c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d6d07bce3b413796e80d210ec9b0806') in 0.034444 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 182.973725 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c90875642ba9552ff199570bcd9ac8c0') in 0.012728 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 177.473023 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe6a8ed5d135358fc5e3fd45b794987e') in 0.010894 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 208.935301 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'Unity Shaders Book/Chapter 9/ForwardRendering': Did not find shader kernel 'vert' to compile at line 143 (on d3d11)
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 2>, Vertex program with SHADOWS_DEPTH
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: SHADER_API_GLES30 SHADOWS_CUBE UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
-Shader error in 'Unity Shaders Book/Chapter 9/ForwardRendering': Did not find shader kernel 'frag' to compile at line 143 (on d3d11)
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 2>, Fragment program with SHADOWS_DEPTH
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: SHADER_API_GLES30 SHADOWS_CUBE UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
-Shader error in 'Unity Shaders Book/Chapter 9/ForwardRendering': Did not find shader kernel 'vert' to compile at line 143 (on d3d11)
-
-Compiling Subshader: 0, Pass: <Unnamed Pass 2>, Vertex program with SHADOWS_DEPTH
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: SHADER_API_GLES30 SHADOWS_CUBE UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING
- -> (artifact id: '08c868ad106bcf99cffe12f1d40ac2de') in 0.027791 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 58.282972 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf8d47a32c8f1692eba7a85962cb9515') in 0.095251 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 8.877909 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2110505ad3abbddd1d6089aabbca952') in 0.011508 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 8.568702 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afa9e5dbd735c834c5b90d83756f2a1f') in 0.048962 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 4.384868 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '116f028cf766ff7b2e18af4898f0bc87') in 0.011803 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 90.831623 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44c3fe9d7fd82a228865d912041beccb') in 0.073667 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 6.266745 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b162ec740a1720236d6ef2aedcf2473') in 0.012142 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 319.505180 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09c7e9d204790cfeb6b022adeb437db7') in 0.022468 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 6.869628 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eed4b5edced15b60146247635e72a491') in 0.009474 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 215.131282 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0ce8dd8d3251f38b66d83cc5d555715') in 0.052715 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 10.428513 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8aaab76027c7b8a1ea175675839406f8') in 0.096418 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 43.652626 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ae0a7c6437261ef7ce5a224cc9f6267') in 0.090765 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 27.759830 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '911dd458505f813ba3e903d4fd9cddf7') in 0.069171 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 15.667902 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9054435db42fb767e6cb7d994f01066d') in 0.054318 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 3.776285 seconds.
-  path: Assets/ch9/ForwardRendering.shader
-  artifactKey: Guid(ccd09a7fb48dd1742a5b20c0f36a88d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRendering.shader using Guid(ccd09a7fb48dd1742a5b20c0f36a88d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a467b2a8c53b8c36da7edd7626804996') in 0.000863 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 20.758444 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22c460490fb9e37aa9f74c94822c01f2') in 0.203392 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 26.704836 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04f38f2b610294311ac866018d8a23e5') in 0.061555 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 9.448947 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd46a316ea31f5ecbdef3c89b1d348e36') in 0.358791 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 31.117268 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62c75aed95cf724752ab5ac6d4728a51') in 0.062643 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 46.701920 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2265460fdf0ac1404b908acc2694b773') in 0.059247 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 31.732342 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91e7ef5411fe823489ad629f164096cc') in 0.244929 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 9.292029 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60ded83b9c136f8549ab76c91a125cc6') in 0.167428 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 24.497310 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1aea0504e3da1f6511d798c208f34641') in 0.045220 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 24.837831 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ffcf6efce4e97de6b113e757b9ab2f7') in 0.057128 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 20.797567 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d32652649462ce5bb495db2c145ac02') in 0.049541 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 18.465220 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebb4c531fd8d36383ecde69d29676083') in 0.045902 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 12.420403 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3675d7fcefde28935e408b68ecf926f') in 0.056006 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 8.653130 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9eade6936b0c7a5806fe6e448369cede') in 0.044177 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 11.126742 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bf27e58eb012b487a192d7994cb4b5c') in 0.045885 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 11.886344 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86b8124ce63d2fed801937135897a631') in 0.044419 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 9.800586 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2df035f329553327c0d7d02a8f31bbca') in 0.042058 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 24.576583 seconds.
-  path: Assets/ch9/ForwardRenderingMat.mat
-  artifactKey: Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRenderingMat.mat using Guid(2e38201c4750aab42ac76fafd37fd591) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfe5a33cab76775d30e5c32ef5c5ac74') in 0.035058 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 950.569896 seconds.
-  path: Assets/ch8/AlphaBlendBothSidedMat.mat
-  artifactKey: Guid(d36c130d67e835c49a1b697407f42162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch8/AlphaBlendBothSidedMat.mat using Guid(d36c130d67e835c49a1b697407f42162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '570911058b95bc1abf36f934e28688c6') in 0.026220 seconds
-Number of updated asset objects reloaded before import = 1
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 493.245407 seconds.
-  path: Assets/ch9/Scene/Scene_9_4_2.unity
-  artifactKey: Guid(e072181402dcad944b9b7debfe623605) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/Scene/Scene_9_4_2.unity using Guid(e072181402dcad944b9b7debfe623605) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e411acdfc48ad8a7775256644616f83') in 0.000814 seconds
+  Time since last request: 173665.012277 seconds.
+  path: Assets/ch11/Billboard.shader
+  artifactKey: Guid(4bfaf31efa9ddfe49b9a52dfbd90714c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/Billboard.shader using Guid(4bfaf31efa9ddfe49b9a52dfbd90714c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd14ea19d289de6b8b318513c8a54eb6') in 0.014828 seconds
 Number of updated asset objects reloaded before import = 1
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 6.670477 seconds.
-  path: Assets/ch9/ShadowMat.mat
-  artifactKey: Guid(ca81ff939fcace94488c46b92b5f5c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ShadowMat.mat using Guid(ca81ff939fcace94488c46b92b5f5c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef1da317e9069a8c75a3ad923f3a639d') in 0.011251 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 24.788630 seconds.
-  path: Assets/ch9/ForwardRendering.shader
-  artifactKey: Guid(ccd09a7fb48dd1742a5b20c0f36a88d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRendering.shader using Guid(ccd09a7fb48dd1742a5b20c0f36a88d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac1fcf3c44517937d213d4f6e24fd96c') in 0.000910 seconds
-Number of updated asset objects reloaded before import = 0
+  Time since last request: 6.428823 seconds.
+  path: Assets/ch11/VertexAnimationWIthShadow.shader
+  artifactKey: Guid(7603d328a2f05e942a78d4da3b9d9494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/VertexAnimationWIthShadow.shader using Guid(7603d328a2f05e942a78d4da3b9d9494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '308550b97183426835493e3006d25938') in 0.000964 seconds
+Number of updated asset objects reloaded before import = 1
 Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 1.487422 seconds.
-  path: Assets/ch9/ForwardRendering 1.shader
-  artifactKey: Guid(49c2a962be7f33147b2fd71696376065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ForwardRendering 1.shader using Guid(49c2a962be7f33147b2fd71696376065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5131e3920360ffb49b365c999c66151f') in 0.001735 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 6.675892 seconds.
-  path: Assets/ch9/Shadow.shader
-  artifactKey: Guid(49c2a962be7f33147b2fd71696376065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/Shadow.shader using Guid(49c2a962be7f33147b2fd71696376065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5998efc7f8e8af346b9c4bb34e3b2ef3') in 0.001736 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 36.155779 seconds.
-  path: Assets/ch9/Shadow.shader
-  artifactKey: Guid(49c2a962be7f33147b2fd71696376065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/Shadow.shader using Guid(49c2a962be7f33147b2fd71696376065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '342eb86c48e8a369a5885ca6da4ff44a') in 0.001751 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 687.627313 seconds.
-  path: Assets/ch9/Shadow.shader
-  artifactKey: Guid(49c2a962be7f33147b2fd71696376065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/Shadow.shader using Guid(49c2a962be7f33147b2fd71696376065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8f848b5ae5da3a434897a29fd5b9132') in 0.001890 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 1471.361922 seconds.
-  path: Assets/ch8/AlphaTestBothSidedMat.mat
-  artifactKey: Guid(c332160cd354235498160e0eecbfc02c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch8/AlphaTestBothSidedMat.mat using Guid(c332160cd354235498160e0eecbfc02c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '279852eab2e4773409cba2c888434134') in 0.014192 seconds
+  Time since last request: 80.699440 seconds.
+  path: Assets/ch11/WaterMat 3.mat
+  artifactKey: Guid(aead97c7cdd613441be8a9ebd2d03639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/WaterMat 3.mat using Guid(aead97c7cdd613441be8a9ebd2d03639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1040f80cd23d6f1c28fa50f50187e4d0') in 0.086938 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 1069.054334 seconds.
-  path: Assets/ch9/Scene/Scene_9_4_4.unity
-  artifactKey: Guid(0e9ae553f006f5a4bbec1781e83a841a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/Scene/Scene_9_4_4.unity using Guid(0e9ae553f006f5a4bbec1781e83a841a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41f08ed9f7ce72f61948b660aa44e9d2') in 0.000767 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 25.814409 seconds.
-  path: Assets/ch9/ShadowMat.mat
-  artifactKey: Guid(ca81ff939fcace94488c46b92b5f5c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/ShadowMat.mat using Guid(ca81ff939fcace94488c46b92b5f5c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4377bb89d755f01f43fd84970d4263b') in 0.083443 seconds
+  Time since last request: 5.547249 seconds.
+  path: Assets/ch11/BillboardMat.mat
+  artifactKey: Guid(dd4cfe9d4ea2fbb4fb6ac67bd756a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/BillboardMat.mat using Guid(dd4cfe9d4ea2fbb4fb6ac67bd756a28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '049683de905bd3d519f8dcf8ae94de35') in 0.056085 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 165.989610 seconds.
-  path: Assets/ch9/AttenuationAndShadowUseBuildInFunctions.mat
-  artifactKey: Guid(361edeb831942d842945fb3d7a495ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/AttenuationAndShadowUseBuildInFunctions.mat using Guid(361edeb831942d842945fb3d7a495ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb1f7581675d1843c369acebbc23ad96') in 0.013034 seconds
+  Time since last request: 14.489804 seconds.
+  path: Assets/ch11/VertexAnimationWIthShadowMat.mat
+  artifactKey: Guid(aead97c7cdd613441be8a9ebd2d03639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/VertexAnimationWIthShadowMat.mat using Guid(aead97c7cdd613441be8a9ebd2d03639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94e04b4798638d7595d94698f7364b94') in 0.015170 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 1.770259 seconds.
-  path: Assets/ch9/Shadow.shader
-  artifactKey: Guid(49c2a962be7f33147b2fd71696376065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/Shadow.shader using Guid(49c2a962be7f33147b2fd71696376065) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ad81ff75ac2a17c6172d44d2d5fb7c1') in 0.001789 seconds
+  Time since last request: 241.693467 seconds.
+  path: Assets/ch11/Scene/Scene_11_3_3.unity
+  artifactKey: Guid(46835fccabee83648aaf8efd37663d20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/Scene/Scene_11_3_3.unity using Guid(46835fccabee83648aaf8efd37663d20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '102132eed4d035aa57aab89344221810') in 0.000744 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
+Number of asset objects unloaded after import = 0
 ========================================================================
 Received Import Request.
-  Time since last request: 1.227843 seconds.
-  path: Assets/ch9/Shadow 1.shader
-  artifactKey: Guid(32705e73acfc53d499d256027ebbc52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/Shadow 1.shader using Guid(32705e73acfc53d499d256027ebbc52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c55092dd2f337fb65ed71ad6f943d4c') in 0.001698 seconds
+  Time since last request: 38.583761 seconds.
+  path: Assets/ch11/VertexAnimationWIthShadowMat.mat
+  artifactKey: Guid(aead97c7cdd613441be8a9ebd2d03639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/VertexAnimationWIthShadowMat.mat using Guid(aead97c7cdd613441be8a9ebd2d03639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9113fa6eaf22aa081fecedd50619750') in 0.062317 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
+Number of asset objects unloaded after import = 2
 ========================================================================
-Received Import Request.
-  Time since last request: 4.168604 seconds.
-  path: Assets/ch9/AttenuationAndShadowUseBuildInFunctions.shader
-  artifactKey: Guid(32705e73acfc53d499d256027ebbc52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/AttenuationAndShadowUseBuildInFunctions.shader using Guid(32705e73acfc53d499d256027ebbc52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59c48145e3229b9735cab948611541c3') in 0.001684 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 4.602794 seconds.
-  path: Assets/ch9/AttenuationAndShadowUseBuildInFunctionsMat.mat
-  artifactKey: Guid(361edeb831942d842945fb3d7a495ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/AttenuationAndShadowUseBuildInFunctionsMat.mat using Guid(361edeb831942d842945fb3d7a495ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ede880a504037ed6243bbd3287ac9e7e') in 0.012272 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 379.869388 seconds.
-  path: Assets/ch9/AttenuationAndShadowUseBuildInFunctions.shader
-  artifactKey: Guid(32705e73acfc53d499d256027ebbc52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/AttenuationAndShadowUseBuildInFunctions.shader using Guid(32705e73acfc53d499d256027ebbc52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bd6bb1b24b742e174f9735bc44c67ea') in 0.001984 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 18.686237 seconds.
-  path: Assets/ch9/AttenuationAndShadowUseBuildInFunctionsMat.mat
-  artifactKey: Guid(361edeb831942d842945fb3d7a495ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/AttenuationAndShadowUseBuildInFunctionsMat.mat using Guid(361edeb831942d842945fb3d7a495ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader error in 'Unity Shaders Book/Chapter 9/AttenuationAndShadowUseBuildInFunctions': redefinition of 'atten' at line 61 (on d3d11)
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  1.488 seconds
+Refreshing native plugins compatible for Editor in 6.86 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  6.426 seconds
+Domain Reload Profiling: 7911ms
+	BeginReloadAssembly (151ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (29ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (35ms)
+	LoadAllAssembliesAndSetupDomain (1250ms)
+		LoadAssemblies (1320ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (14ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (6427ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (390ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (61ms)
+			ProcessInitializeOnLoadAttributes (288ms)
+			ProcessInitializeOnLoadMethodAttributes (24ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 5.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (31.1 KB). Loaded Objects now: 3662.
+Memory consumption went from 144.6 MB to 144.5 MB.
+Total: 3.731200 ms (FindLiveObjects: 0.439900 ms CreateObjectMapping: 0.127400 ms MarkObjects: 3.113500 ms  DeleteObjects: 0.049600 ms)
 
-Compiling Subshader: 0, Pass: <Unnamed Pass 0>, Vertex program with DIRECTIONAL LIGHTPROBE_SH
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDBASE UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADER_API_GLES30 SHADOWS_SCREEN SHADOWS_SHADOWMASK UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING VERTEXLIGHT_ON
-Shader error in 'Unity Shaders Book/Chapter 9/AttenuationAndShadowUseBuildInFunctions': redefinition of 'atten' at line 61 (on d3d11)
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 126.540214 seconds.
+  path: Assets/ch11/Texture/water 1.psd
+  artifactKey: Guid(77c4f84000ef36c468f95fe87918b0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/Texture/water 1.psd using Guid(77c4f84000ef36c468f95fe87918b0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1397580f137bf8f9093c060bbc2536fb') in 0.060650 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 17.761636 seconds.
+  path: Assets/ch11/Texture/water.psd
+  artifactKey: Guid(77c4f84000ef36c468f95fe87918b0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/Texture/water.psd using Guid(77c4f84000ef36c468f95fe87918b0f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e875a2bded712f6cbca6d0c4db58c6ee') in 0.012066 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.422 seconds
+Refreshing native plugins compatible for Editor in 5.34 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.114 seconds
+Domain Reload Profiling: 1532ms
+	BeginReloadAssembly (129ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (215ms)
+		LoadAssemblies (267ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (14ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1115ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (434ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (70ms)
+			ProcessInitializeOnLoadAttributes (318ms)
+			ProcessInitializeOnLoadMethodAttributes (26ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Refreshing native plugins compatible for Editor in 5.84 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (31.0 KB). Loaded Objects now: 3667.
+Memory consumption went from 146.5 MB to 146.5 MB.
+Total: 6.162500 ms (FindLiveObjects: 0.461300 ms CreateObjectMapping: 0.122800 ms MarkObjects: 5.494300 ms  DeleteObjects: 0.080400 ms)
 
-Compiling Subshader: 0, Pass: <Unnamed Pass 0>, Vertex program with DIRECTIONAL LIGHTPROBE_SH
-Platform defines: SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_ENABLE_DETAIL_NORMALMAP UNITY_ENABLE_REFLECTION_BUFFERS UNITY_LIGHTMAP_FULL_HDR UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_PASS_FORWARDBASE UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BLENDING UNITY_SPECCUBE_BOX_PROJECTION UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS
-Disabled keywords: DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADER_API_GLES30 SHADOWS_SCREEN SHADOWS_SHADOWMASK UNITY_ASTC_NORMALMAP_ENCODING UNITY_FRAMEBUFFER_FETCH_AVAILABLE UNITY_HALF_PRECISION_FRAGMENT_SHADER_REGISTERS UNITY_HARDWARE_TIER1 UNITY_HARDWARE_TIER2 UNITY_HARDWARE_TIER3 UNITY_LIGHTMAP_DLDR_ENCODING UNITY_LIGHTMAP_RGBM_ENCODING UNITY_METAL_SHADOWS_USE_POINT_FILTERING UNITY_NO_DXT5nm UNITY_NO_FULL_STANDARD_SHADER UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 UNITY_PBS_USE_BRDF3 UNITY_PRETRANSFORM_TO_DISPLAY_ORIENTATION UNITY_UNIFIED_SHADER_PRECISION_MODEL UNITY_VIRTUAL_TEXTURING VERTEXLIGHT_ON
- -> (artifact id: '73e8f8bd53d82ad5651190665604290c') in 0.100985 seconds
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 105.776565 seconds.
+  path: Assets/ch11/Water.prefab
+  artifactKey: Guid(5390e68ecd1ff0e429896bb395b6bd19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/Water.prefab using Guid(5390e68ecd1ff0e429896bb395b6bd19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0873663ead3b62fb30c2de111bbabcbf') in 0.084621 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/ch11/WaterMat 1.mat
+  artifactKey: Guid(bc6c98706eb30dc41bdb13a014e90c5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/WaterMat 1.mat using Guid(bc6c98706eb30dc41bdb13a014e90c5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f6bb8163df169bd08c1f9933013b24e') in 0.024622 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 4.212765 seconds.
+  path: Assets/ch11/VertexAnimationWIthShadowMat 1.mat
+  artifactKey: Guid(30c68e0dead14e1458e923b62eacc48b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/VertexAnimationWIthShadowMat 1.mat using Guid(30c68e0dead14e1458e923b62eacc48b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df36e42d9ed93652b67ad3ae937ffb9e') in 0.014783 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 23.436687 seconds.
+  path: Assets/ch11/VertexAnimationWIthShadowMat 1.mat
+  artifactKey: Guid(30c68e0dead14e1458e923b62eacc48b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/VertexAnimationWIthShadowMat 1.mat using Guid(30c68e0dead14e1458e923b62eacc48b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1a791dfd52fe4c405a7bd67a96b5d1e') in 0.013083 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 40.588740 seconds.
-  path: Assets/ch9/AttenuationAndShadowUseBuildInFunctions.shader
-  artifactKey: Guid(32705e73acfc53d499d256027ebbc52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/AttenuationAndShadowUseBuildInFunctions.shader using Guid(32705e73acfc53d499d256027ebbc52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbfb7dd2b36f4a18b17eb48439eb5108') in 0.001796 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 574.433711 seconds.
-  path: Assets/ch9/AttenuationAndShadowUseBuildInFunctionsMat.mat
-  artifactKey: Guid(361edeb831942d842945fb3d7a495ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/AttenuationAndShadowUseBuildInFunctionsMat.mat using Guid(361edeb831942d842945fb3d7a495ee6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '695a70a12f4deb4c120241e27a5cb17b') in 0.098767 seconds
+  Time since last request: 73.231556 seconds.
+  path: Assets/ch11/VertexAnimationWIthShadowMat.mat
+  artifactKey: Guid(aead97c7cdd613441be8a9ebd2d03639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/VertexAnimationWIthShadowMat.mat using Guid(aead97c7cdd613441be8a9ebd2d03639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea3812f1c062824492b40ed552efea9c') in 0.014594 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 302.352710 seconds.
-  path: Assets/ch9/Chapter9-AlphaTestWithShadow.shader
-  artifactKey: Guid(50ac2519be4f37e4aa4134f1a345f8a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/Chapter9-AlphaTestWithShadow.shader using Guid(50ac2519be4f37e4aa4134f1a345f8a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63fc84c97667b8a0988696fe3815dde5') in 0.002220 seconds
+  Time since last request: 0.000024 seconds.
+  path: Assets/ch11/WaterMat 2.mat
+  artifactKey: Guid(e6ae3df4ea8da8c4fb74b4062b3a1ea2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/WaterMat 2.mat using Guid(e6ae3df4ea8da8c4fb74b4062b3a1ea2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '741d3d5e22be5b8aa95ce22973ac434b') in 0.013946 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 3.440848 seconds.
-  path: Assets/ch9/AlphaTestWithShadow.shader
-  artifactKey: Guid(50ac2519be4f37e4aa4134f1a345f8a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/AlphaTestWithShadow.shader using Guid(50ac2519be4f37e4aa4134f1a345f8a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a1ec3d02ba6e980a24f82e3feb3e79e') in 0.001786 seconds
+  Time since last request: 0.000020 seconds.
+  path: Assets/ch11/WaterMat 3.mat
+  artifactKey: Guid(c95f4ace61516e34290e92dab88f2874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/WaterMat 3.mat using Guid(c95f4ace61516e34290e92dab88f2874) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72eecfda7d5561836e25b329e95df3fc') in 0.030453 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
+Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 21.112367 seconds.
-  path: Assets/ch9/AlphaTestWithShasdow.mat
-  artifactKey: Guid(ced3ac47bcc8ee34182741029064ac98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/AlphaTestWithShasdow.mat using Guid(ced3ac47bcc8ee34182741029064ac98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e38e18699b51997ba085341b09273a4') in 0.013334 seconds
+  Time since last request: 0.000024 seconds.
+  path: Assets/ch11/WaterMat.mat
+  artifactKey: Guid(7dbe7eb789cc1594697ec63a6e0b9045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/WaterMat.mat using Guid(7dbe7eb789cc1594697ec63a6e0b9045) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2728ad3115aacff2ae1aba71def2ad2b') in 0.014969 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.459 seconds
+Refreshing native plugins compatible for Editor in 5.52 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.149 seconds
+Domain Reload Profiling: 1603ms
+	BeginReloadAssembly (134ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (29ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (241ms)
+		LoadAssemblies (297ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (14ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (1150ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (447ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (73ms)
+			ProcessInitializeOnLoadAttributes (326ms)
+			ProcessInitializeOnLoadMethodAttributes (27ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Refreshing native plugins compatible for Editor in 6.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3081 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (31.1 KB). Loaded Objects now: 3670.
+Memory consumption went from 148.4 MB to 148.4 MB.
+Total: 3.381800 ms (FindLiveObjects: 0.484600 ms CreateObjectMapping: 0.124900 ms MarkObjects: 2.711500 ms  DeleteObjects: 0.059400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.564983 seconds.
-  path: Assets/ch9/AlphaTestWithShadow.mat
-  artifactKey: Guid(ced3ac47bcc8ee34182741029064ac98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/AlphaTestWithShadow.mat using Guid(ced3ac47bcc8ee34182741029064ac98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac8f8a4b13fbcfc0e79e2b94d565a1d0') in 0.014649 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 8.230035 seconds.
-  path: Assets/ch9/AlphaTestWithShadowMat.mat
-  artifactKey: Guid(ced3ac47bcc8ee34182741029064ac98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/AlphaTestWithShadowMat.mat using Guid(ced3ac47bcc8ee34182741029064ac98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c0a414a26b58822474ca410f69bab51') in 0.012253 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 243.049408 seconds.
-  path: Assets/ch9/Scene/Scene_9_4_5.unity
-  artifactKey: Guid(686008c092390984e8fe440bb79c8f84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/Scene/Scene_9_4_5.unity using Guid(686008c092390984e8fe440bb79c8f84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a263a08442f882a3449b6320295871de') in 0.000646 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.956766 seconds.
-  path: Assets/ch9/Scene/Scene_9_4_4.unity
-  artifactKey: Guid(0e9ae553f006f5a4bbec1781e83a841a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/Scene/Scene_9_4_4.unity using Guid(0e9ae553f006f5a4bbec1781e83a841a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f38e5dd00ddb0b169d67f6c7b6758ad1') in 0.000703 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 167.194730 seconds.
-  path: Assets/ch9/AlphaTestWithShadowMat.mat
-  artifactKey: Guid(ced3ac47bcc8ee34182741029064ac98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/AlphaTestWithShadowMat.mat using Guid(ced3ac47bcc8ee34182741029064ac98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a2871f413e330f258c1f01eb1c43f12') in 0.054720 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 3
-========================================================================
-Received Import Request.
-  Time since last request: 474.877230 seconds.
-  path: Assets/ch9/AlphaTestWithShadowMat 1.mat
-  artifactKey: Guid(8c57b57c779a1354b99cefffaab4c361) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ch9/AlphaTestWithShadowMat 1.mat using Guid(8c57b57c779a1354b99cefffaab4c361) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65d3986dc3411c9754accf35ec04f6e9') in 0.015702 seconds
+  Time since last request: 190.943634 seconds.
+  path: Assets/ch11/WaterMat 1.mat
+  artifactKey: Guid(bc6c98706eb30dc41bdb13a014e90c5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ch11/WaterMat 1.mat using Guid(bc6c98706eb30dc41bdb13a014e90c5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cad5cb148c9c0888d98b983ad86b5fd') in 0.068156 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1

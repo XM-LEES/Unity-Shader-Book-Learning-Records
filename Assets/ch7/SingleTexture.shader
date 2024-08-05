@@ -1,4 +1,3 @@
-
 Shader "Unity Shaders Book/Chapter 7/Single Texture" {
 	Properties {
 		_Color ("Color Tint", Color) = (1, 1, 1, 1)
@@ -39,11 +38,11 @@ Shader "Unity Shaders Book/Chapter 7/Single Texture" {
 			v2f vert(a2v v) {
 				v2f o;
 				o.pos = UnityObjectToClipPos(v.vertex);
-				// o.worldNormal = UnityObjectToWorldNormal(v.normal);
-				o.worldNormal = mul(v.normal, unity_WorldToObject);
+				o.worldNormal = UnityObjectToWorldNormal(v.normal);
+				// o.worldNormal = mul(v.normal, unity_WorldToObject);
 				o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
 
-				o.uv = v.texcoord.xy * _MainTex_ST.xy * _MainTex_ST.zw;
+				o.uv = v.texcoord.xy * _MainTex_ST.xy + _MainTex_ST.zw;
 				// o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 				
 				return o;
