@@ -1047,8 +1047,6 @@ GrabPass { "_RefractionTex" }
 
 
 
-
-
 ## 动画
 
 ### 纹理动画
@@ -1243,7 +1241,7 @@ v2f vert (a2v v) {
 	float3 viewer = mul(unity_WorldToObject,float4(_WorldSpaceCameraPos, 1));
 	float3 normalDir = viewer - center;
 
-    //确定初始up    
+    //确定初始up
 	normalDir.y =normalDir.y * _VerticalBillboarding;
 	normalDir = normalize(normalDir);
 	float3 upDir = abs(normalDir.y) > 0.999 ? float3(0, 0, 1) : float3(0, 1, 0);
@@ -1606,6 +1604,299 @@ v.vertex = v.vertex + offset;
 
 
 
+
+
+## 屏幕后处理
+
+渲染完整个场景的到屏幕图像后，再对图像进行的一系列操作，可以实现各种屏幕特效，如景深、运动模糊等
+
+
+
+OnRenderImage：抓取屏幕保存至渲染纹理
+默认在所有透明和不透明的pass执行完后调用，也可添加ImageEffectOpaque限制对不透明物体产生影响
+
+Blit：对渲染纹理进行处理
+
+
+
+### 调整亮度、饱和度、对比度
+
+使用材质和shader处理渲染纹理
+
+subshader关闭Fallback
+
+Pass设置：ZTest Always Cull Off ZWrite Off
+
+整个过程相当于将屏幕图像当作一张纹理，对纹理采样并处理；顶点着色器不变，在片元着色器中调整
+
+
+
+### 边缘检测
+
+在shader中实现常见的图像处理算法，本例用到卷积操作
+
+使用3x3卷积核，需要9个采样点，将计算采样纹理坐标的代码从片元着色器转移到顶点着色器，减少运算，线性插值对纹理坐标的计算不会产生影响
+
+相邻两个像素的纹理坐标偏移：_MainTex_TexelSize
+
+
+
+### 高斯模糊
+
+将二维高斯核拆分成两个一维高斯核，第一个pass对竖直方向滤波，第二个pass对水平方向滤波
+
+使用多个pass需要中间缓存，手动声明并且手动释放
+
+```glsl
+RenderTexture buffer = RenderTexture.GetTemporary(rtW, rtH, 0);
+/*...*/
+RenderTexture.ReleaseTemporary(buffer);
+```
+
+
+
+OnRenderImage中降采样提高性能
+声明缓冲区的时候使用小于屏幕的的分辨率尺寸，并设置临时渲染纹理的滤波模式
+
+```glsl
+int rtW = src.width/downSample;
+int rtH = src.height/downSample;
+RenderTexture buffer = RenderTexture.GetTemporary(rtW, rtH, 0);
+buffer.filterMode = FilterMode.Bilinear;
+```
+
+OnRenderImage中也可以使用for循环控制迭代次数
+
+
+
+使用两个临时缓存在迭代之间进行交替
+
+```glsl
+	void OnRenderImage (RenderTexture src, RenderTexture dest) {
+		if (material != null) {
+			int rtW = src.width/downSample;
+			int rtH = src.height/downSample;
+
+			RenderTexture buffer0 = RenderTexture.GetTemporary(rtW, rtH, 0);
+			buffer0.filterMode = FilterMode.Bilinear;
+
+			Graphics.Blit(src, buffer0);
+
+			for (int i = 0; i < iterations; i++) {
+				material.SetFloat("_BlurSize", 1.0f + i * blurSpread);
+
+				RenderTexture buffer1 = RenderTexture.GetTemporary(rtW, rtH, 0);
+
+				// Render the vertical pass
+				Graphics.Blit(buffer0, buffer1, material, 0);
+
+				RenderTexture.ReleaseTemporary(buffer0);
+				buffer0 = buffer1;
+				buffer1 = RenderTexture.GetTemporary(rtW, rtH, 0);
+
+				// Render the horizontal pass
+				Graphics.Blit(buffer0, buffer1, material, 1);
+
+				RenderTexture.ReleaseTemporary(buffer0);
+				buffer0 = buffer1;
+			}
+
+			Graphics.Blit(buffer0, dest);
+			RenderTexture.ReleaseTemporary(buffer0);
+		} else {
+			Graphics.Blit(src, dest);
+		}
+	}
+}
+```
+
+
+
+问题：为什么只释放buffer0，不见释放buffer1？
+
+```
+C#中的变量和内存管理
+在C#中，变量名确实保存的是对象的地址，尤其是对于引用类型（如类）。这意味着当你将buffer0指向buffer1时，你是在传递地址（引用），而非创建一个新的对象拷贝。这就是为什么通过更改buffer0的指向来释放buffer1的内容是可行的。
+```
+
+PS：用GPT对代码进行分析和优化是危险的，例证在此：
+
+```
+chatGPT
+关于buffer1的释放
+在您的代码中，最后一个buffer1并没有被显式释放。这是因为在每次迭代的最后一步，buffer0指向了buffer1，而buffer1被赋予了新的RenderTexture。因此，在迭代的每一轮结束时，buffer1的前一个实例都已经通过buffer0被释放了。但是，在循环结束后，最后一个为buffer1分配的RenderTexture实际上没有再被使用，也就没有被释放。
+
+You
+RenderTexture.ReleaseTemporary(buffer1);是多余的吧，因为每轮循环所申请的缓存都在每轮循环结束时被释放了
+
+ChatGPT
+您是对的，再看一次代码，确实每轮循环中申请的buffer1在每轮结束时通过buffer0指向buffer1，然后释放buffer0的方式已经被释放了。所以，每次循环的末尾，新分配给buffer1的RenderTexture在下一次迭代开始时被重新分配给了buffer0，并且在迭代中被释放。这样，循环结束时，buffer0已经指向了最后一个buffer1，并且在循环外已经被释放。
+```
+
+
+
+问题：为什么要使用两个临时缓存交替？
+
+A call to Blit with `source` and `dest` set to the same RenderTexture may result in undefined behaviour. A better approach is to either use [Custom Render Textures](https://docs.unity.cn/2022.1/Documentation/Manual/class-CustomRenderTexture.html) with double buffering, or use two RenderTextures and alternate between them to implement double buffering manually
+
+在同一个缓存上读写会产生读写冲突问题
+
+如果某个片元正在读取其周围像素进行模糊处理，同时这些像素已经被其他片元修改，就会造成数据不一致，使用两个缓存可以确保一个缓存用于读操作（未被修改的数据），另一个缓存用于写操作（存储新的结果）
+
+[Unity - Scripting API: Graphics.Blit](https://docs.unity.cn/2022.1/Documentation/ScriptReference/Graphics.Blit.html#:~:text=A call to Blit with source and dest,alternate between them to implement double buffering manually.)
+
+[Unity - Manual: Post-processing and full-screen effects](https://docs.unity.cn/2022.1/Documentation/Manual/PostProcessingOverview.html)
+
+
+
+问题：每轮循环都要申请和释放，只申请释放一次行不行？
+
+在示例的场景中可行，循环开始前创建buffer0和buffer1，循环结束后释放。
+
+```
+纹理本身不会被销毁， 用到时会重新自动创建。
+与其他“本机引擎对象”类型一样，必须时刻注意任何渲染纹理的生命周期， 并牢记在使用完渲染纹理后释放它们， 因为系统不会像对待常规托管类型那样对它们进行垃圾回收。
+```
+
+```
+频繁地申请和释放资源会导致额外的性能开销，如果能够减少这些操作，理论上可以提高程序的效率，但它会带来一些具体的技术和性能挑战，尤其是在需要保持高效和高质量图像处理的场景中
+
+资源占用和管理：长时间占用大量资源（如高分辨率的RenderTexture）可能导致内存使用效率降低，尤其是在资源受限的环境（如移动设备）中。动态申请和释放资源可以更灵活地管理内存，适应不同的使用需求。
+
+数据隔离和干扰：重复使用同一缓存可能导致数据污染，尤其是在多次迭代中如果不完全重写缓存内容的情况下。每次迭代开始时都有一个“干净”的缓存可以确保处理结果的准确性和一致性。
+
+错误处理和资源泄露：如果在长时间循环中由于某些错误（如中途异常）导致提前退出，可能会更难以确保资源的正确释放，从而引起内存泄露。
+```
+
+挖坑：高斯模糊算法在shader中实现
+
+
+
+### bloom
+
+cs文件中与高斯模糊区别：
+
+高斯模糊直接对屏幕纹理计算卷积结果；bloom先提取较亮的区域pass0，对较亮的区域进行高斯模糊处理pass1 pass2，最后用处理得到的“亮纹理”与原先屏幕纹理混合pass3
+
+
+
+pass0：
+
+顶点着色器传递裁剪空间坐标和纹理坐标，片元着色器计算亮度值，减去阈值后截取到0-1，与原始图像相乘，得到亮部区域（超阈值的地方不变，暗的地方变0，介于之间的略微微变暗）
+
+pass1 2：
+
+pass0就已经得到_Bloom，高斯模糊只是让其更平滑，更朦胧。使得明暗分界明确的地方也能变模糊。
+
+pass3：
+
+对两张纹理进行采样，相加混合
+
+平台差异化处理：开启抗锯齿，同时处理多张渲染图象（深度纹理或由其他脚本传递的纹理），图像竖直方向朝向可能不同，可能需要根据平台翻转。
+
+```glsl
+//脚本material.SetTexture ("_Bloom", buffer0);传递_Bloom
+#if UNITY_UV_STARTS_AT_TOP			
+if (_MainTex_TexelSize.y < 0.0)
+	o.uv.w = 1.0 - o.uv.w;
+#endif
+```
+
+
+
+### Test：保留单一颜色
+
+受修图软件保留单一颜色功能的启发，Scene_12_Test中实现了保留/剔除指定hsv颜色的功能，hsv转rgb计算精度不是很理想，不如直接用rgb值更准确一些（fixed定点数精度不高，大概四位浮点数，如果计算过程很长，累积误差不容忽视）。
+
+这里挖个坑，如何做到保留画面中单一色彩时支持从屏幕中取色？
+
+
+
+总结：
+
+需要赋给相机脚本文件，OnRenderImage抓取屏幕保存至渲染纹理，经shader处理后再显示
+
+
+
+可以以这篇文章中使用的c#脚本文件为标准[【Unity Shader编程】之十五 屏幕高斯模糊(Gaussian Blur)后期特效的实现_image 高斯模糊shader-CSDN博客](https://blog.csdn.net/poem_qianmo/article/details/51871531)
+
+c#脚本中，public变量可以在属性面板访问
+
+一个相机可以加多个cs脚本，按顺序执行
+
+
+
+
+
+###  运动模糊
+
+累积缓存：混合多张连续图像，消耗大
+
+速度缓存：存储各个像素当前运动速度，根据该值决定模糊大小和方向
+
+累积缓存还可以选择将当前渲染图象叠加到之前的渲染图像中，牺牲部分模糊效果得到更好性能（示例）
+
+
+
+示例的实现是利用了一块累积缓存来混合多张连续的图像，不断将当前图像叠加到之前渲染好的图像中
+累积缓冲区：把颜色缓冲区与累积缓冲区中的内容反复进行混合，可以用来进行模糊处理和抗锯齿。
+
+
+
+
+
+shader第一个pass根据blurAmount混合RGB值，第二个pass恢复alpha通道值
+
+```
+我写书的时候也在考虑这个Pass的必要性，如果没有这个Pass理论上A通道应该不会受这个屏幕后处理的影响。但我当时写的时候是参考了内置的Motion Blur，恩我担心是我考虑不周全没有明白官方的奥妙所以保留了这个Pass，确保A通道的正确性
+```
+
+[关于12章运动模糊问题 · Issue #51 · candycat1992/Unity_Shaders_Book (github.com)](https://github.com/candycat1992/Unity_Shaders_Book/issues/51)
+
+
+
+问题：OnRenderImage抓取屏幕保存至渲染纹理_MainTex，在这个纹理中的颜色和缓存中颜色不应该是一样的吗？
+
+- 有必要先复习一下Blend命令[unity ShaderLab 基础之【像素混合Blend】Blend命令详解 shaderLab blend blendOp透明度颜色混合_unity blend-CSDN博客](https://blog.csdn.net/lengyoumo/article/details/104231130)，shader中开启了混合Blend，会将当前颜色和已经位于帧缓存中的颜色混合。Blend SrcAlpha OneMinusSrcAlpha参数说明按照 alpha 1-alpha的比例混合当前颜色和缓冲区的颜色。
+
+- 首先要弄清楚当前颜色和缓冲区分别是什么。当前颜色是_MainTex即抓取的屏幕内容，帧缓存指的是什么不确定，可以这里进行如下实验：
+
+  - _BlurAmount = 1
+
+    始终显示第一帧，根据混合因子，结果为缓冲区中的内容
+
+  - _BlurAmount = 0
+
+    没有运动模糊效果，根据混合因子，结果为_MainTex中的内容
+
+  每一帧得到的原纹理src与accumulationTexture进行混合，也就是说混合用到的帧缓存是目标纹理的。accumulationTexture始终保存的是上一帧经过处理后的输出内容，blurAmount=1，画面定格。
+
+```
+Graphics.Blit (src, accumulationTexture, material);
+
+Description
+Copies source texture into destination render texture with a shader.
+
+This is mostly used for implementing post-processing effects.
+
+Blit sets as the render target, sets property on the material, and draws a full-screen quad.
+
+To blit to the screen backbuffer in the Built-in Render Pipeline, you must ensure that is , and that the Camera.targetTexture property of Camera.main is also null. If is null, Unity tries to use as the destination.
+
+To blit to the screen backbuffer in a render pipeline based on the Scriptable Render Pipeline, you must call Graphics.Blit in a method that you call from the RenderPipelineManager.endFrameRendering or RenderPipelineManager.endContextRendering callbacks.
+
+If you want to use a depth or stencil buffer that is part of the (Render)texture, you have to manually write an equivalent of the Graphics.Blit function - i.e. Graphics.SetRenderTarget with destination color buffer and source depth buffer, setup orthographic projection (GL.LoadOrtho), setup material pass (Material.SetPass) and draw a quad (GL.Begin).
+
+In Linear color space, it is important to have the correct sRGB<->Linear color conversion state set. Depending on what was rendered previously, the current state might not be the one you expect. You should consider setting GL.sRGBWrite as you need it before doing Blit or any other manual rendering.
+
+A call to Blit with and set to the same RenderTexture may result in undefined behaviour. A better approach is to either use Custom Render Textures with double buffering, or use two RenderTextures and alternate between them to implement double buffering manually.
+
+Graphics.Blit changes RenderTexture.active. Keep track of the previously active RenderTexture if you need to use it after calling Graphics.Blit.
+```
+
+[Unity - 脚本 API：Graphics.Blit](https://docs.unity.cn/2022.1/Documentation/ScriptReference/Graphics.Blit.html#:~:text=A call to Blit with source and dest,alternate between them to implement double buffering manually.)
+
+[Unity - Scripting API: MonoBehaviour.OnRenderImage(RenderTexture,RenderTexture)](https://docs.unity.cn/ScriptReference/MonoBehaviour.OnRenderImage.html)
 
 
 

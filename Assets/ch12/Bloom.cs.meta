@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 7b91f6e247bce994aadd378cdef3ecd3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - bloomShader: {fileID: 4800000, guid: f569cc925e1f86548a1ced50e801199a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
